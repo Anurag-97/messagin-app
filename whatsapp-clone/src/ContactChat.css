@@ -1,0 +1,21 @@
+.contactinfo{
+    padding-left: 10px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+    height:70px;
+    align-items: center;
+}
+.extra{
+    align-items: center;
+    justify-content: space-around;
+}
+.info{
+    margin-top: 5px;
+    margin-left:10px;
+    margin-bottom: 5px;
+}
+.contactinfo:hover{
+    background-color: lightgray;
+}
+

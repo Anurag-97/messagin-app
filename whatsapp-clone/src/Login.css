@@ -1,0 +1,17 @@
+.login>Button{
+    background-color: darkolivegreen;
+    color:rgb(255, 254, 253);
+    text-transform: inherit;
+}
+.login>Button:hover{
+    color:black;
+}
+.login>h3{
+    font-size: 20px;
+}
+.login>h4{
+    font-size: 19px;
+}
+.login>h5{
+    font-size: 18px;
+}

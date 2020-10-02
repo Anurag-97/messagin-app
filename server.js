@@ -5,15 +5,14 @@ import contactlist from './contactlist.js'
 import Pusher from 'pusher'
 import cors from 'cors'
 import path from 'path'
-const bodyParser = require('body-parser')
-
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true })); 
+import bodyParser from 'body-parser'
 
 
 const app=express();
 const port=process.env.PORT || 5000
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 app.use(express.json())
 app.use(cors())
@@ -57,7 +56,7 @@ db.once('open',()=>{
 })
 app.get('/',(req,res)=>res.status(200).send("Its working"));
 app.get('/messages',(req,res)=>{
-    console.log(req.query)
+    //console.log(req.query)
     //console.log(req.query.receiver)
     const send=req.query.sender;
     const rec=req.query.receiver;
@@ -107,9 +106,9 @@ app.post('/add',(req,res)=>{
     })
 })
 if(process.env.NODE_ENV==='production'){
-    app.use(express.static(path.join(__dirname, 'client/build')));
+    app.use(express.static('client/build'));
     app.get('*',(req,res)=>{
-        res.sendFile(path.join(__dirname,'client/build/index.html'));
+        res.sendFile(path.join(__dirname,'client','build','index.html'));
     })
 }
 app.listen(port,()=>{

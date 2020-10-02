@@ -5,6 +5,11 @@ import contactlist from './contactlist.js'
 import Pusher from 'pusher'
 import cors from 'cors'
 import path from 'path'
+const bodyParser = require('body-parser')
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 
 const app=express();

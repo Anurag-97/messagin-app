@@ -6,13 +6,15 @@
   "type": "module",
   "scripts": {
     "client-install": "npm install --prefix client",
-    "start": "node index.js",    "server": "nodemon index.js",    
-    "client": "npm start --prefix client",    
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Anurag",
   "license": "ISC",
   "dependencies": {
+    "babel-preset-react": "^6.24.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "firebase": "^7.21.1",
